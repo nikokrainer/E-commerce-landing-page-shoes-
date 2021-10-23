@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./sass/style.scss" />
+    <script src="./scripts/index.js" defer></script>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- /fonts -->
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="sidebarMenu has-animation hide-for-desktop">
+      <ul class="container container--px">
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebarMenuBackground has-animation hide-for-desktop"></div>
+
+    <div class="imagePopup-container hidden hide-for-mobile">
+      <div class="imagePopup">
+      <div class="imagePopup__mainImage">
+        <a class="close"><img src="images/icon-close.svg" alt="close"></a>
+      <div class="imagePopup__arrow-left"><img src="images/icon-previous.svg" alt=""></div>
+      <div class="imagePopup__arrow-right"><img src="images/icon-next.svg" alt=""></div>
+        <img class="big-image big-image-selected" src="images/image-product-1.jpg" alt="">
+        <img class="big-image" src="images/image-product-2.jpg" alt="product-1">
+        <img class="big-image" src="images/image-product-3.jpg" alt="product-2">
+        <img class="big-image" src="images/image-product-4.jpg" alt="product-3">
+      </div>
+      <div class="imagePopup__smallImages flex flex-ai-c flex-jc-sb">
+        <img class="small-image small-image-selected" src="images/image-product-1-thumbnail.jpg" alt="">
+        <img class="small-image" src="images/image-product-2-thumbnail.jpg" alt="">
+        <img class="small-image" src="images/image-product-3-thumbnail.jpg" alt="">
+        <img class="small-image" src="images/image-product-4-thumbnail.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+    <div class="shoppingCart hidden">
+      <div class="shoppingCart__text">Cart</div>
+      <div class="shoppingCart__item-container hidden">
+        <div class="shoppingCart__item">
+          <div class="flex flex-ai-c">
+            <img
+              class="thumbnail"
+              src="images/image-product-1-thumbnail.jpg"
+              alt=""
+            />
+            <div class="shopingCart__description">
+              <p class="hide-for-desktop">Autumn Limited Edition...</p>
+              <p class="hide-for-mobile">Fall limited edition sneakers</p>
+              <p class="shopingCart__price">
+                $125 x <span class="priceTimes">1</span>
+                <span class="total">$375.00</span>
+              </p>
+            </div>
+          </div>
+          <a href="#"
+            ><img class="thrash" src="images/icon-delete.svg" alt=""
+          /></a>
+        </div>
+        <div class="shoppingCart__btn flex flex-ai-c flex-jc-c">
+          <img src="images/icon-cart.svg" alt="cart" />
+          <p>Checkout</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="nav-container">
+      <nav
+        class="
+          nav
+          container container--px container--py
+          flex flex-ai-c flex-jc-sb
+        "
+      >
+        <div class="nav__burger-logo flex flex-ai-c">
+          <a class="nav__hamburgerMenu hide-for-desktop" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="nav__logo">
+            <a href="#">
+              <img src="images/logo.svg" alt="" />
+            </a>
+          </div>
+
+          <div class="nav__links hide-for-mobile">
+            <ul>
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nav__cart-avatar flex flex-ai-c">
+          <a href="#" class="cartImg">
+            <p class="cartNumber hidden">2</p>
+            <img src="./images/icon-cart.svg" alt="" />
+          </a>
+          <div class="avatar">
+            <img src="./images/image-avatar.png" alt="" />
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <section class="shoes-section-container container container--px">
+      <div class="shoes-section">
+        <div class="images">
+          <div class="carousel">
+            <div class="carousel__item carousel__item--visible">
+              <img src="images/image-product-1.jpg" alt="" />
+            </div>
+            <div class="carousel__item">
+              <img src="images/image-product-2.jpg" alt="" />
+            </div>
+            <div class="carousel__item">
+              <img src="images/image-product-3.jpg" alt="" />
+            </div>
+            <div class="carousel__item">
+              <img src="images/image-product-4.jpg" alt="" />
+            </div>
+
+            <div class="carousel__actions hide-for-tablet">
+              <button
+                id="carousel__button--prev"
+                aria-label="Previous slide"
+              ></button>
+              <button
+                id="carousel__button--next"
+                aria-label="Next slide"
+              ></button>
+            </div>
+          </div>
+
+          <div
+            class="
+              carousel__small-images
+              flex flex-ai-c flex-jc-sb
+              hide-for-mobile-down
+            "
+          >
+            <div class="small-img">
+              <img
+                class="img-selected"
+                src="images/image-product-1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="small-img">
+              <img src="images/image-product-2.jpg" alt="" />
+            </div>
+            <div class="small-img">
+              <img src="images/image-product-3.jpg" alt="" />
+            </div>
+            <div class="small-img">
+              <img src="images/image-product-4.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="description">
+          <!-- container container--px container--py -->
+          <p class="description__company">SNEAKER COMPANY</p>
+          <h1 class="description__header">Fall Limited Edition Sneakers</h1>
+          <p class="description__product-description">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they'll withstand everything
+            the weather can offer.
+          </p>
+          <div class="description__prices flex flex-ai-c flex-jc-sb">
+            <div class="price1 flex flex-ai-c">
+              <h1 class="description__main-price">$125.00</h1>
+              <p class="description__discount">50%</p>
+            </div>
+
+            <div class="discount">
+              <p class="description__original-price">$250.00</p>
+            </div>
+          </div>
+
+          <div class="cart">
+            <div class="add-remove flex flex-ai-c flex-jc-sb">
+              <a href="#" class="minus"
+                ><img src="images/icon-minus.svg" alt="minus"
+              /></a>
+              <p class="number">0</p>
+              <a href="#" class="plus"
+                ><img src="images/icon-plus.svg" alt="minus"
+              /></a>
+            </div>
+            <div class="add-to-cart flex flex-ai-c flex-jc-c">
+              <img src="images/icon-cart.svg" alt="" />
+              <p>Add to cart</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

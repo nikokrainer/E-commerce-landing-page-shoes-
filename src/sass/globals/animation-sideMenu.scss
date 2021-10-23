@@ -1,0 +1,71 @@
+@use '../util/' as *;
+
+.has-animation {
+  visibility: hidden;
+}
+
+@keyframes slide-in {
+  from {
+    visibility: hidden;
+    transform: translateX(-100%);
+
+    @include breakpoint(medium){
+    transform: translateX(0);
+    }
+  }
+
+  1% {
+    visibility: visible;
+    transform: translateX(-100%);
+
+    @include breakpoint(medium){
+        transform: translateX(0);
+        }
+  }
+
+  to {
+    visibility: visible;
+    transform: translateX(0);
+
+    @include breakpoint(medium){
+        transform: translateX(0);
+        }
+  }
+}
+
+.slide-in {
+  animation: slide-in 300ms ease-in-out forwards;
+}
+
+@keyframes slide-out {
+  from {
+    visibility: visible;
+    transform: translateX(0);
+
+    @include breakpoint(medium){
+        transform: translateX(0);
+        }
+  }
+
+  99% {
+    visibility: visible;
+    transform: translateX(-100%);
+
+    @include breakpoint(medium){
+        transform: translateX(0);
+        }
+  }
+
+  to {
+    visibility: hidden;
+    transform: translateX(-100%);
+
+    @include breakpoint(medium){
+        transform: translateX(0);
+        }
+  }
+}
+
+.slide-out {
+  animation: slide-out 250ms ease-in-out forwards;
+}

@@ -1,0 +1,65 @@
+@use "../util" as *;
+@use "./shoes.scss" as *;
+
+.shoppingCart{
+    z-index: 1;
+    width: 35rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    position: absolute;
+    top: 10rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 .7rem .7rem hsla(0, 0, 0, 0.15);
+
+    @include breakpoint (medium){
+        width: 40rem;
+        transform: translateX(0);
+        right: 3rem;
+        left: auto;
+    }
+
+    @include breakpoint(large){
+        left: 50%;
+    }
+
+    &__text{
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--darkGrayishBlue);
+        padding: 2.5rem 3rem;
+    }
+
+    &__item-container{}
+
+    &__item{
+        padding: 2rem 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid var(--grayishBlue);
+        .thumbnail{
+            border-radius: 1rem;
+            width: 5rem;
+            margin-right: 2rem;
+        }
+        .shopingCart__description{
+            p{
+                font-size: 1.6rem;
+            }
+        }
+        a{}
+    }
+}
+
+.shoppingCart__btn{
+
+    @extend %add-to-cart;
+ margin: 0 3rem 2rem 3rem;
+}
+
+
+.total{
+    font-weight: 700;
+}

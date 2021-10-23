@@ -1,0 +1,15 @@
+@mixin container {
+    max-width: 111.3rem;
+	margin: 0 auto;
+}
+
+@mixin container--px{
+    padding-left: 5rem;
+	padding-right: 5rem;
+}
+
+@mixin container--py{
+    padding-top: 2.6rem;
+		padding-bottom: 2.6rem;
+}
+
